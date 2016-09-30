@@ -49,7 +49,7 @@ public class BookApi {
 
     private BookApiService service;
 
-    private BookApi(OkHttpClient okHttpClient) {
+    public BookApi(OkHttpClient okHttpClient) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constant.API_BASE_URL)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) // 添加Rx适配器
